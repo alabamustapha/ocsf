@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
 
     &__briefing {
         display: flex;
@@ -24,7 +24,7 @@
         p {
             width: 897px;
             font-weight: $font-weight-sml;
-            font-size: 24px;
+            font-size: 20px;
             line-height: 40px;
         }
     }
@@ -33,6 +33,7 @@
 // Featured Projects
 .featured {
     padding: 7rem 0;
+    background-color: #F5F5F5;
 
     &__briefings {
         text-align: center;
