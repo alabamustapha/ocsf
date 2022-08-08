@@ -125,7 +125,7 @@ nav {
     .mission__briefing h1 {
       text-align: center;
       font-weight: 600;
-      font-size: 41px;
+      font-size: 38px;
       line-height: 123%; }
     .mission__briefing p {
       width: 897px;
@@ -134,11 +134,37 @@ nav {
       line-height: 40px; }
 
 .featured {
-  padding: 7rem 0;
+  padding: 4.5rem 0;
   background-color: #F5F5F5; }
-  .featured__briefings {
-    text-align: center; }
+  .featured__main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; }
+  .featured__briefings h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 123%; }
   .featured__carousel {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .featured__carousel__switch {
+      display: flex;
+      justify-content: center;
+      gap: 20px; }
+  .featured__modal {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 300px; }
+    .featured__modal__image img {
+      width: 300px; }
+    .featured__modal__briefings {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      text-align: center; }
+      .featured__modal__briefings p {
+        line-height: 24px; }
