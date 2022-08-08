@@ -1,0 +1,33 @@
+.btn {
+    border-radius: none;
+    padding: 10px 24px;
+    font-family: $btn-font-fam;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-sml;
+    font-size: $btn-font-size;
+    cursor: pionter;
+
+    &__nav {
+        background-color: transparent;
+        color: $btn-color;
+        border: 1px solid $btn-color;
+
+        &:hover {
+            background-color: $btn-color;
+            color: $color-white;
+            border: 1px solid $btn-color;
+        }
+    }
+
+    &__fill {
+        background-color: $btn-color;
+        color: $color-white;
+        border: 1px solid $btn-color;
+
+        &:hover {
+            background-color: transparent;
+            color: $btn-color;
+            border: 1px solid $btn-color;
+        }
+    }
+}

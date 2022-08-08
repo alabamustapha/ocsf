@@ -1,0 +1,19 @@
+nav {
+    background-color: $color-white;
+    box-shadow: $shadow;
+}
+
+.nav {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,46 @@
+// Misssion Section
+.mission {
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+        font-family: $default-font-family;
+
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+        }
+
+        p {
+            width: 897px;
+            font-weight: $font-weight-sml;
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+}
+
+// Featured Projects
+.featured {
+    padding: 7rem 0;
+
+    &__briefings {
+        text-align: center;
+    }
+
+    &__carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

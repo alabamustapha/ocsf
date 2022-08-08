@@ -1,0 +1,29 @@
+header {
+    background-image: url('../img/Rectangle 218.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+}
+
+.header {
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h1 {
+            width: 500px;
+            font-weight: $font-weight-md;
+            line-height: 123%;
+        }
+
+        p {
+            width: 426px;
+            font-weight: $font-weight-sml;
+            font-size: 23px;
+            line-height: 139.5%;
+        }
+    }
+}

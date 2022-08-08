@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background-color: $color-white;
+    font-family: $default-font-family;
+    font-size: $default-font-size
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: $nav-hover;
+    font
+
+    &:hover {
+        border-bottom: 2px solid $default-color;
+    }
+}
