@@ -9,7 +9,6 @@
         flex-direction: column;
         gap: 5px;
         font-weight: $font-weight-sml;
-        color: ;
 
         
         h3{
@@ -42,4 +41,17 @@
 
 .copyright{
     background-color: $bg-black;
+    
+    &__flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        padding: 50px 0;
+
+        p, a{
+            color: $btn-color;
+        }
+    }
 }

@@ -40,7 +40,7 @@ a {
   font
 li:hover, font
   a:hover {
-    border-bottom: 2px solid #191919; }
+    border-bottom: 2px solid #212121; }
 
 footer {
   background-color: #A0CF46; }
@@ -81,7 +81,7 @@ footer {
     margin-bottom: 80px; }
     .about__row-text {
       width: 45%;
-      color: #191919;
+      color: #212121;
       margin-bottom: 31px; }
       .about__row-text h3 {
         font-size: 36px;
@@ -120,6 +120,15 @@ footer {
 
 .copyright {
   background-color: #212121; }
+  .copyright__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 50px 0; }
+    .copyright__flex p, .copyright__flex a {
+      color: #A0CF46; }
 
 header {
   background-image: url("../img/Rectangle 218.png");
@@ -210,7 +219,7 @@ nav {
     .mission__briefing h1 {
       text-align: center;
       font-weight: 600;
-      font-size: 41px;
+      font-size: 38px;
       line-height: 123%; }
     .mission__briefing p {
       width: 897px;
@@ -219,11 +228,114 @@ nav {
       line-height: 40px; }
 
 .featured {
-  padding: 7rem 0;
+  padding: 4.5rem 0;
   background-color: #F5F5F5; }
-  .featured__briefings {
-    text-align: center; }
+  .featured__main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; }
+  .featured__briefings h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 123%; }
   .featured__carousel {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .featured__carousel__switch {
+      display: flex;
+      justify-content: center;
+      gap: 20px; }
+  .featured__modal {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 300px; }
+    .featured__modal__image img {
+      width: 300px; }
+    .featured__modal__briefings {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      text-align: center; }
+      .featured__modal__briefings p {
+        line-height: 24px; }
+
+.sponsor {
+  background-color: #fff;
+  padding: 5rem 0; }
+  .sponsor__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px; }
+  .sponsor__briefing h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 123%;
+    padding-bottom: 50px; }
+
+.team {
+  padding: 4.5rem 0;
+  background-color: #F5F5F5; }
+  .team__briefing h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 123%;
+    padding-bottom: 50px; }
+  .team__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around; }
+  .team__modal {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    width: 270px; }
+    .team__modal__image img {
+      width: 270px; }
+    .team__modal__briefings {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      text-align: center; }
+
+.gallery {
+  background-color: #fff;
+  padding: 5rem 0; }
+  .gallery__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .gallery__img img {
+    width: 320px; }
+  .gallery__briefing h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 123%;
+    padding-bottom: 50px; }
+
+.donation {
+  background: #212121;
+  padding: 4.5rem 0; }
+  .donation__briefing {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; }
+    .donation__briefing h1 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 123%;
+      width: 500px;
+      color: #fff; }

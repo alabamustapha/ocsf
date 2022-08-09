@@ -32,16 +32,177 @@
 
 // Featured Projects
 .featured {
-    padding: 7rem 0;
+    padding: 4.5rem 0;
     background-color: #F5F5F5;
 
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
     &__briefings {
-        text-align: center;
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+        }
     }
 
     &__carousel {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        &__switch {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
+    &__modal {
+        display: flex;
+        background-color: $color-white;
+        flex-direction: column;
+        width: 300px;
+
+        &__image {
+            img {
+                width: 300px;
+            }
+        }
+
+        &__briefings {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+
+            p {
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// Sponsor
+.sponsor {
+    background-color: $color-white;
+    padding: 5rem 0;
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    &__briefing {
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+// Teams
+.team {
+    padding: 4.5rem 0;
+    background-color: #F5F5F5;
+
+    &__briefing {
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+    }
+
+    &__modal {
+        display: flex;
+        background-color: $color-white;
+        flex-direction: column;
+        width: 270px;
+
+        &__image {
+            img {
+                width: 270px;
+            }
+        }
+
+        &__briefings {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+        }
+    }
+}
+
+// Gallery
+.gallery {
+    background-color: $color-white;
+    padding: 5rem 0;
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__img{
+        img {
+            width: 320px;
+        }
+    }
+
+    &__briefing {
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+// Donations
+.donation {
+    background: $default-color;
+    padding: 4.5rem 0;
+
+    &__briefing {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            font-weight: $font-weight-m;
+            font-size: $h1-paragraph;
+            line-height: 123%;
+            width: 500px;
+            color: $color-white;
+        }
     }
 }
