@@ -45,6 +45,12 @@ li:hover, font
 footer {
   background-color: #A0CF46; }
 
+.btn__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px; }
+
 .btn {
   border-radius: none;
   padding: 10px 24px;
@@ -126,21 +132,22 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
-    padding: 50px 0; }
+    padding: 40px 0; }
     .copyright__flex p, .copyright__flex a {
       color: #A0CF46; }
 
 header {
-  background-image: url("../img/Rectangle 218.png");
+  background: linear-gradient(90.14deg, #FFFFFF 41.65%, rgba(237, 127, 52, 0) 58.16%), url("../img/Rectangle 218.png");
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   background-size: cover;
   background-position: top;
-  background-repeat: no-repeat;
-  padding: 5rem 0; }
+  background-repeat: no-repeat; }
 
 .header__briefing {
   display: flex;
   flex-direction: column;
-  gap: 15px; }
+  gap: 15px;
+  padding: 5rem 0; }
   .header__briefing h1 {
     width: 500px;
     font-weight: 700;
@@ -195,6 +202,7 @@ nav {
   .nav__list {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 25px;
     justify-content: space-around; }
   .nav__main {
@@ -242,7 +250,8 @@ nav {
   .featured__carousel {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: center;
+    gap: 20px; }
     .featured__carousel__switch {
       display: flex;
       justify-content: center;
@@ -251,17 +260,18 @@ nav {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    width: 300px; }
+    justify-content: space-between; }
     .featured__modal__image img {
-      width: 300px; }
+      width: 100%; }
     .featured__modal__briefings {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 20px;
+      padding: 20px 60px;
       text-align: center; }
       .featured__modal__briefings p {
-        line-height: 24px; }
+        font-weight: 400;
+        font-size: 20px; }
 
 .sponsor {
   background-color: #fff;
@@ -291,17 +301,17 @@ nav {
   .team__main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around; }
+    gap: 20px; }
   .team__modal {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    width: 270px;
+    width: 293.84px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
     .team__modal__image img {
-      width: 270px; }
+      width: 100%; }
     .team__modal__briefings {
       display: flex;
       flex-direction: column;
@@ -314,7 +324,6 @@ nav {
   .gallery__main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 0px;
     gap: 15px; }
   .gallery__img {
