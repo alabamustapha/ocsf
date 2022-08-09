@@ -133,9 +133,9 @@ footer {
 header {
   background-image: url("../img/Rectangle 218.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  padding: 6rem 0; }
+  padding: 5rem 0; }
 
 .header__briefing {
   display: flex;
@@ -298,7 +298,8 @@ nav {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    width: 270px; }
+    width: 270px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
     .team__modal__image img {
       width: 270px; }
     .team__modal__briefings {
@@ -312,11 +313,14 @@ nav {
   padding: 5rem 0; }
   .gallery__main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 15px; }
+  .gallery__img {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-  .gallery__img img {
-    width: 320px; }
+    gap: 15px; }
   .gallery__briefing h1 {
     text-align: center;
     font-weight: 600;
@@ -339,3 +343,6 @@ nav {
       line-height: 123%;
       width: 500px;
       color: #fff; }
+
+.extra img {
+  width: 298.75px; }
