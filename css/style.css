@@ -237,7 +237,10 @@ nav {
 
 .featured {
   padding: 4.5rem 0;
-  background-color: #F5F5F5; }
+  background-color: #F5F5F5;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
   .featured__main {
     display: flex;
     flex-direction: column;
@@ -250,8 +253,12 @@ nav {
   .featured__carousel {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    margin: 10px auto;
+    width: 98%;
+    overflow-x: auto;
     gap: 20px; }
+    .featured__carousel::-webkit-scrollbar {
+      visibility: hidden; }
     .featured__carousel__switch {
       display: flex;
       justify-content: center;
@@ -260,14 +267,18 @@ nav {
     display: flex;
     background-color: #fff;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative;
+    min-width: 300px;
+    margin: 10px 20px;
+    transition: 0.5s; }
     .featured__modal__image img {
       width: 100%; }
     .featured__modal__briefings {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 20px 60px;
+      padding: 20px;
       text-align: center; }
       .featured__modal__briefings p {
         font-weight: 400;
