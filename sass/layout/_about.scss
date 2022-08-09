@@ -1,0 +1,32 @@
+.about {
+    padding: 60px 0;
+
+
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 80px;
+
+        &-text{
+            width: 45%;
+            color: $default-color;
+            margin-bottom: 31px;
+
+            h3{
+                font-size: 36px;
+                font-weight: $font-weight-m;
+                letter-spacing: -0.84px;   
+            }
+            p{
+                font-size: 20px;
+                line-height: 40px;
+                font-weight: $font-weight-sml;
+            }
+        }
+
+
+    }
+}

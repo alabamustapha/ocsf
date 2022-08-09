@@ -1,3 +1,6 @@
+.navigation{
+    background-color: $bg-black;
+}
 nav {
     background-color: $color-white;
     box-shadow: $shadow;
@@ -9,6 +12,12 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    &__number {
+        color: $btn-color;
+        font-weight: $font-weight-sml;
+        font-size: $default-font-size;
+    }
 
     &__list {
         display: flex;
