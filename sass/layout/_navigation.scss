@@ -1,5 +1,9 @@
 .navigation{
     background-color: $bg-black;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
 }
 nav {
     background-color: $color-white;
@@ -13,6 +17,13 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    &__connect {
+        @include respond(phone) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
     &__number {
         color: $btn-color;
         font-weight: $font-weight-sml;
@@ -25,6 +36,10 @@ nav {
         align-items: center;
         gap: 25px;
         justify-content: space-around;
+
+        @include respond(tab-land) {
+            display: none;
+        }
     }
 
     &__main {
@@ -32,5 +47,17 @@ nav {
         flex-direction: row;
         align-items: center;
         gap: 30px;
+    }
+
+    &__menu {
+        display: none;
+
+        @include respond(tab-land) {
+            display: block;
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
     }
 }

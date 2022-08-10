@@ -1,3 +1,7 @@
+.none {
+    display: none;
+}
+
 // Misssion Section
 .mission {
     background-color: $color-white;
@@ -22,10 +26,15 @@
         }
 
         p {
-            width: 897px;
             font-weight: $font-weight-sml;
             font-size: 20px;
             line-height: 40px;
+        }
+    }
+
+    &__image {
+        img {
+            width: 100%;
         }
     }
 }
@@ -57,7 +66,7 @@
         display: flex;
         flex-direction: row;
         margin: 10px auto;
-        width: 98%;
+        width: 100%;
         overflow-x: auto;
         gap: 20px;
 
@@ -188,6 +197,11 @@
         display: flex;
         flex-direction: row;
         gap: 15px;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            object-fit: contain;
+        }
     }
 
     &__briefing {
@@ -219,13 +233,25 @@
             line-height: 123%;
             width: 500px;
             color: $color-white;
+
+            @include respond(phone) {
+                width: auto;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        @include respond(phone) {
+            flex-direction: column;
         }
     }
 }
 
-// extra
-.extra {
-    img {
-        width: 298.75px;
-    }
+// Extra
+.show-links {
+    display: block; 
 }

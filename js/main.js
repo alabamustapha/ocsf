@@ -1,3 +1,11 @@
+// beginning of toggle
+const toggleBtn = document.querySelector(".nav__menu");
+const links = document.querySelector(".nav__list");
+
+toggleBtn.addEventListener("click", function(){
+    links.classList.toggle("show-links");
+});
+
 // Carousel Part
 var span = document.getElementsByTagName('span');
 var modal = document.getElementsByTagName("div");

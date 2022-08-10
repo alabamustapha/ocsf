@@ -3,6 +3,10 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
 }
 .btn {
     border-radius: none;

@@ -50,6 +50,9 @@ footer {
   flex-direction: row;
   align-items: center;
   gap: 10px; }
+  @media (max-width: 37.5em) {
+    .btn__container {
+      flex-direction: column; } }
 
 .btn {
   border-radius: none;
@@ -124,6 +127,13 @@ footer {
   flex-direction: row;
   gap: 40px;
   padding: 80px 0; }
+  @media (max-width: 75em) {
+    .footer {
+      gap: 30px; } }
+  @media (max-width: 56.25em) {
+    .footer {
+      flex-direction: column;
+      text-align: center; } }
   .footer__row {
     display: flex;
     flex-direction: column;
@@ -133,17 +143,30 @@ footer {
       font-size: 24px;
       font-weight: 400;
       margin-bottom: 10px; }
+      @media (max-width: 75em) {
+        .footer__row h3 {
+          font-size: 18px;
+          font-weight: 600; } }
     .footer__row p {
       line-height: 2.3;
       font-size: 16px; }
+      @media (max-width: 75em) {
+        .footer__row p {
+          font-size: 14px; } }
     .footer__row-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
       font-size: 16px; }
+      @media (max-width: 75em) {
+        .footer__row-list {
+          font-size: 14px; } }
     .footer__row-group h4 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600; }
+    @media (max-width: 75em) {
+      .footer__row__logo {
+        width: 140px; } }
 
 .copyright {
   background-color: #212121; }
@@ -154,14 +177,19 @@ footer {
     align-items: center;
     font-size: 12px;
     padding: 40px 0; }
-    .copyright__flex p, .copyright__flex a {
+    @media (max-width: 56.25em) {
+      .copyright__flex {
+        flex-direction: column;
+        text-align: center; } }
+    .copyright__flex p,
+    .copyright__flex a {
       color: #A0CF46; }
 
 header {
   background: linear-gradient(90.14deg, #FFFFFF 41.65%, rgba(237, 127, 52, 0) 58.16%), url("../img/Rectangle 218.png");
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat; }
 
 .header__briefing {
@@ -169,15 +197,28 @@ header {
   flex-direction: column;
   gap: 15px;
   padding: 5rem 0; }
+  @media (max-width: 37.5em) {
+    .header__briefing {
+      text-align: center;
+      justify-content: center; } }
   .header__briefing h1 {
     width: 500px;
     font-weight: 700;
     line-height: 123%; }
+    @media (max-width: 37.5em) {
+      .header__briefing h1 {
+        text-align: center;
+        justify-content: center;
+        width: auto; } }
   .header__briefing p {
     width: 426px;
     font-weight: 400;
     font-size: 18px;
     line-height: 139.5%; }
+    @media (max-width: 37.5em) {
+      .header__briefing p {
+        width: auto;
+        font-size: 14px; } }
 
 .header__container {
   display: flex;
@@ -205,6 +246,9 @@ header {
 
 .navigation {
   background-color: #212121; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      flex-direction: column; } }
 
 nav {
   background-color: #fff;
@@ -216,6 +260,10 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .nav__connect {
+      flex-direction: column;
+      text-align: center; } }
   .nav__number {
     color: #A0CF46;
     font-weight: 400;
@@ -226,11 +274,24 @@ nav {
     align-items: center;
     gap: 25px;
     justify-content: space-around; }
+    @media (max-width: 75em) {
+      .nav__list {
+        display: none; } }
   .nav__main {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px; }
+  .nav__menu {
+    display: none; }
+    @media (max-width: 75em) {
+      .nav__menu {
+        display: block; } }
+  .nav__logo {
+    cursor: pointer; }
+
+.none {
+  display: none; }
 
 .mission {
   background-color: #fff;
@@ -251,10 +312,11 @@ nav {
       font-size: 38px;
       line-height: 123%; }
     .mission__briefing p {
-      width: 897px;
       font-weight: 400;
       font-size: 20px;
       line-height: 40px; }
+  .mission__image img {
+    width: 100%; }
 
 .featured {
   padding: 4.5rem 0;
@@ -275,7 +337,7 @@ nav {
     display: flex;
     flex-direction: row;
     margin: 10px auto;
-    width: 98%;
+    width: 100%;
     overflow-x: auto;
     gap: 20px; }
     .featured__carousel::-webkit-scrollbar {
@@ -362,6 +424,10 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 15px; }
+    @media (max-width: 75em) {
+      .gallery__img {
+        flex-direction: column;
+        object-fit: contain; } }
   .gallery__briefing h1 {
     text-align: center;
     font-weight: 600;
@@ -384,6 +450,16 @@ nav {
       line-height: 123%;
       width: 500px;
       color: #fff; }
+      @media (max-width: 37.5em) {
+        .donation__briefing h1 {
+          width: auto; } }
+  .donation__btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; }
+    @media (max-width: 37.5em) {
+      .donation__btn {
+        flex-direction: column; } }
 
-.extra img {
-  width: 298.75px; }
+.show-links {
+  display: block; }
