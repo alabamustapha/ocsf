@@ -11,8 +11,14 @@
 .container {
     padding: 0 100px;
     
+    @include respond(tab-land){
+        padding: 0 50px;
+    }
     @include respond(tab-port){
         padding: 0 70px;
+    }
+    @include respond(phone){
+        padding: 0 50px;
     }
 }
 

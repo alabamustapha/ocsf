@@ -1,48 +1,77 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     gap: 40px;
     padding: 80px 0;
-    
-    &__row{
+
+    @include respond(tab-land) {
+        gap: 30px;
+    }
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__row {
         display: flex;
         flex-direction: column;
         gap: 5px;
         font-weight: $font-weight-sml;
 
-        
-        h3{
+
+        h3 {
             font-size: 24px;
             font-weight: $font-weight-sml;
             margin-bottom: 10px;
-        }
-        p{
-            line-height: 2.3;
-            font-size: $default-font-size;
+
+            @include respond(tab-land) {
+                font-size: 18px;
+                font-weight: $font-weight-m;
+            }
         }
 
-        &-list{
+        p {
+            line-height: 2.3;
+            font-size: $default-font-size;
+
+            @include respond(tab-land) {
+                font-size: $default-sm-font;
+            }
+        }
+
+        &-list {
             display: flex;
             flex-direction: column;
             gap: 10px;
             font-size: $default-font-size;
-        }
-        
 
-        &-group{
-            
-            h4{
+            @include respond(tab-land) {
+                font-size: $default-sm-font;
+            }
+        }
+
+
+        &-group {
+
+            h4 {
                 font-size: $default-mid-font;
                 font-weight: $font-weight-m;
+            }
+        }
+
+        &__logo {
+            @include respond(tab-land) {
+                width: 140px;
             }
         }
     }
 }
 
-.copyright{
+.copyright {
     background-color: $bg-black;
-    
-    &__flex{
+
+    &__flex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -50,7 +79,13 @@
         font-size: 12px;
         padding: 40px 0;
 
-        p, a{
+        @include respond(tab-port) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        p,
+        a {
             color: $btn-color;
         }
     }

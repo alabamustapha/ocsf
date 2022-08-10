@@ -1,50 +1,74 @@
 header {
     z-index: 1;
     background: linear-gradient(90.14deg, #FFFFFF 41.65%, rgba(237, 127, 52, 0) 58.16%),
-                 url('../img/Rectangle 218.png');
-                filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+        url('../img/Rectangle 218.png');
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
     background-size: cover;
-    background-position: top; 
+    background-position: center;
     background-repeat: no-repeat;
-    
+    z-index: 1;
 }
 
 .header {
-
     &__briefing {
         display: flex;
         flex-direction: column;
         gap: 15px;
         padding: 5rem 0;
 
+        @include respond(phone) {
+            text-align: center;
+            justify-content: center;
+        }
+
         h1 {
             width: 500px;
             font-weight: $font-weight-md;
             line-height: 123%;
+
+            @include respond(phone) {
+                text-align: center;
+                justify-content: center;
+                width: auto;
+            }
         }
 
         p {
             width: 426px;
             font-weight: $font-weight-sml;
-            font-size: 18px;
+            font-size: $default-mid-font;
             line-height: 139.5%;
+
+            @include respond(phone) {
+                width: auto;
+                font-size: $default-sm-font;
+            }
         }
     }
 
-    &__container{
+    &__container {
         display: flex;
         flex-direction: row;
         height: 256px;
         background-color: $bg-black;
 
-        &-green{
+        @include respond(tab-port) {
+            text-align: center;
+            justify-content: center;
+        }
+
+        &-green {
             background-color: $btn-color;
             height: 100%;
             width: 45%;
             clip-path: polygon(0% 0, 100% -40%, 50% 100%, 0 100%);
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
-    
-        &-primary{
+
+        &-primary {
             display: flex;
             flex-direction: column;
             margin: auto 0;
@@ -52,12 +76,17 @@ header {
             letter-spacing: -0.84px;
             color: $color-white;
 
-            h1{
+            @include respond(tab-port) {
+                text-align: center;
+                justify-content: center;
+            }
+
+            h1 {
                 font-weight: $font-weight-m;
                 font-size: 48px;
             }
 
-            p{
+            p {
                 font-weight: $font-weight-sml;
                 font-size: 24px;
             }

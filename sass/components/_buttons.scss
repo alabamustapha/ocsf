@@ -3,6 +3,10 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+
+    @include respond(phone) {      
+        justify-content: center;
+    }
 }
 .btn {
     border-radius: none;
@@ -12,6 +16,11 @@
     font-weight: $font-weight-sml;
     font-size: $btn-font-size;
     cursor: pionter;
+
+    @include respond(tab-land) {      
+        font-size: 13px;
+        padding: 7px 18px;
+    }
 
     &__nav {
         background-color: transparent;
@@ -29,11 +38,6 @@
         background-color: $btn-color;
         color: $color-white;
         border: 1px solid $btn-color;
-
-        &:hover {
-            background-color: transparent;
-            color: $btn-color;
-            border: 1px solid $btn-color;
-        }
     }
+
 }

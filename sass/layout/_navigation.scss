@@ -6,6 +6,8 @@ nav {
     box-shadow: $shadow;
 }
 
+
+
 .nav {
     padding: 10px 100px;
     display: flex;
@@ -13,133 +15,41 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    &__mobile{
-        display: none;
-
+    
+    @include respond(tab-land) {      
+        padding: 8px 50px;
     }
-
-    @include respond(tab-land){
+    @include respond(tab-port) {      
+        padding: 8px 70px;
+    }
+    @include respond(phone) {      
         padding: 8px 50px;
     }
 
-    @include respond(tab-port){
-        padding: 8px 70px;
- 
-        &__mobile{
-            height: 60px;
-            width: 60px;
-            display: inline-block;
-            border: 3px solid $color-black;
-            border-radius: 50%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-            cursor: pointer;
-            transform: scale(0.8);
-            margin-right: 20px;
-    
-            &:after{
-                position: absolute;
-                content: '';
-                height: 100%;
-                width: 100%;
-                border-radius: 50%;
-                border: 3px solid $color-black;
-                // animation: hamburger_puls 1s ease infinite;
-            }
-    
-            &-toggle {
-                // position: absolute;
-                // right: 70px;
-                // top: 60px;
-                // cursor: pointer;
-                // padding: 10px 35px 0 0px;
-    
-                height: 2px;
-                width: 30px;
-                position: relative;
-                background-color: $color-black;
-                z-index: -1;
-    
-                &::after,
-                &::before {
-                    height: 2px;
-                    content: '';
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    left: 0;
-                    background-color: $color-black;
-                    transition: 0.3s ease;
-                    transition-property: top, bottom;
-                }
-    
-                &::after {
-                    top: 8px;
-                }
-                &::before{
-                    bottom: 8px;
-                }
-    
-                @include respond(tab-port){
-                    display: block;
-                }
-    
-                @include respond(phone){
-                    // top: 50px;
-                    // right: 30px;
-                }
-            }
-            
-    
-            .nav__mobile .active .nav__mobile-toggle::after {
-                top: 0;
-                }
-        }
-    }
-
-    @include respond(phone){
-        padding: 5px 30px;
-    }
-
-    }
-
-
-    &__number {
-        color: $btn-color;
-        font-weight: $font-weight-sml;
-        font-size: $default-font-size;
-    }
-
-    &__list {
+    &__list { 
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 25px;
-        font-size: 16px;
-            
-        &-active{
-            display: flex;
-        }
 
         @include respond(tab-land){
-            font-size: 12px;
             gap: 15px;
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
 
-        @include respond(tab-port){
+        @include respond(tab-port) {
             display: none;
             position: absolute;
-            z-index: 2;
-            background-color: $color-white;
-            box-shadow: $shadow;
+            width: 100%;
+            height: 300px;
             top: 100px;
             left: 0;
-            width: 100%;
-            padding: 30px;
-            flex-direction: column;
+            background-color: $color-white;
+            box-shadow: $shadow;
+            z-index: 2;
         }
     }
 
@@ -149,4 +59,44 @@ nav {
         align-items: center;
         gap: 30px;
     }
+
+    &__menu {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+            
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
+    }
 }
+
+.nav__connect {
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(tab-land) {      
+        padding: 8px 50px;
+    }
+    @include respond(tab-port) {      
+        padding: 8px 70px;
+    }
+    @include respond(phone) {      
+        padding: 8px 50px;
+    }
+
+}
+
+
+.nav__number {
+    color: $btn-color;
+    font-weight: $font-weight-sml; 
+    font-size: $default-font-size;
+}
+

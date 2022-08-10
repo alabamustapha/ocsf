@@ -1,3 +1,7 @@
+.none {
+    display: none;
+}
+
 // Misssion Section
 .mission {
     background-color: $color-white;
@@ -22,10 +26,15 @@
         }
 
         p {
-            width: 897px;
             font-weight: $font-weight-sml;
             font-size: 20px;
             line-height: 40px;
+        }
+    }
+
+    &__image {
+        img {
+            width: 100%;
         }
     }
 }
@@ -34,6 +43,9 @@
 .featured {
     padding: 4.5rem 0;
     background-color: #F5F5F5;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 
     &__main {
         display: flex;
@@ -48,14 +60,24 @@
             font-size: $h1-paragraph;
             line-height: 123%;
         }
+
+        
+        p{
+            font-size: 14px;
+        }
     }
 
     &__carousel {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        margin: 10px auto;
+        width: 100%;
+        overflow-x: auto;
         gap: 20px;
-        // justify-content: space-between;
+
+        &::-webkit-scrollbar{
+            visibility: hidden;
+        }
 
         &__switch {
             display: flex;
@@ -69,6 +91,10 @@
         background-color: $color-white;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        min-width: 300px;
+        margin: 10px 20px;
+        transition: 0.5s;
 
         &__image {
             img {
@@ -80,11 +106,10 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding: 20px 60px;
+            padding: 20px;
             text-align: center;
 
             p {
-                // line-height: 24px;
                 font-weight: $font-weight-sml;
                 font-size: $default-mid-size;
             }
@@ -113,6 +138,7 @@
             line-height: 123%;
             padding-bottom: 50px;
         }
+
     }
 }
 
@@ -157,6 +183,7 @@
             flex-direction: column;
             padding: 20px;
             text-align: center;
+
         }
     }
 }
@@ -165,18 +192,23 @@
 .gallery {
     background-color: $color-white;
     padding: 5rem 0;
-
+ 
     &__main {
         display: flex;
         flex-direction: column;
-        padding: 0px;
         gap: 15px;
     }
 
     &__img {
         display: flex;
         flex-direction: row;
+        margin: auto;
         gap: 15px;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            // object-fit: contain;
+        }
     }
 
     &__briefing {
@@ -208,13 +240,21 @@
             line-height: 123%;
             width: 500px;
             color: $color-white;
+
+            @include respond(phone) {
+                width: auto;
+            }
         }
     }
-}
 
-// extra
-.extra {
-    img {
-        width: 298.75px;
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
+}
+.show-links {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
