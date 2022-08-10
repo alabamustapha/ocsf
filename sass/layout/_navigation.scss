@@ -1,9 +1,5 @@
 .navigation{
     background-color: $bg-black;
-
-    @include respond(phone) {
-        flex-direction: column;
-    }
 }
 nav {
     background-color: $color-white;
@@ -18,6 +14,11 @@ nav {
     align-items: center;
 
     &__connect {
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
         @include respond(phone) {
             flex-direction: column;
             text-align: center;

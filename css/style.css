@@ -88,6 +88,10 @@ footer {
     align-items: center;
     width: 100%;
     margin-bottom: 80px; }
+    @media (max-width: 56.25em) {
+      .about__row {
+        flex-direction: column-reverse;
+        text-align: center; } }
     .about__row-text {
       width: 45%;
       color: #212121;
@@ -100,6 +104,12 @@ footer {
         font-size: 20px;
         line-height: 40px;
         font-weight: 400; }
+    @media (max-width: 56.25em) {
+      .about__row__image img {
+        width: 400px; } }
+    @media (max-width: 56.25em) {
+      .about__row__image img {
+        width: 250px; } }
 
 .contact {
   padding: 60px; }
@@ -246,9 +256,6 @@ header {
 
 .navigation {
   background-color: #212121; }
-  @media (max-width: 37.5em) {
-    .navigation {
-      flex-direction: column; } }
 
 nav {
   background-color: #fff;
@@ -260,10 +267,15 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
-  @media (max-width: 37.5em) {
-    .nav__connect {
-      flex-direction: column;
-      text-align: center; } }
+  .nav__connect {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    @media (max-width: 37.5em) {
+      .nav__connect {
+        flex-direction: column;
+        text-align: center; } }
   .nav__number {
     color: #A0CF46;
     font-weight: 400;

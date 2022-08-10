@@ -10,6 +10,11 @@
         width: 100%;
         margin-bottom: 80px;
 
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
         &-text{
             width: 45%;
             color: $default-color;
@@ -18,7 +23,7 @@
             h3{
                 font-size: 36px;
                 font-weight: $font-weight-m;
-                letter-spacing: -0.84px;   
+                letter-spacing: -0.84px;  
             }
             p{
                 font-size: 20px;
@@ -27,6 +32,16 @@
             }
         }
 
+        &__image {
+            img {
+                @include respond(tab-port) {
+                    width: 400px;
+                }
 
+                @include respond(tab-port) {
+                    width: 250px;
+                }
+            }
+        }
     }
 }
