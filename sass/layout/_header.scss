@@ -50,11 +50,20 @@ header {
         height: 256px;
         background-color: $bg-black;
 
+        @include respond(tab-port) {
+            text-align: center;
+            justify-content: center;
+        }
+
         &-green {
             background-color: $btn-color;
             height: 100%;
             width: 45%;
             clip-path: polygon(0% 0, 100% -40%, 50% 100%, 0 100%);
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &-primary {
@@ -64,6 +73,11 @@ header {
             gap: 7px;
             letter-spacing: -0.84px;
             color: $color-white;
+
+            @include respond(tab-port) {
+                text-align: center;
+                justify-content: center;
+            }
 
             h1 {
                 font-weight: $font-weight-m;

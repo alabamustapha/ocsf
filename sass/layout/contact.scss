@@ -17,6 +17,11 @@
     gap: 50px;
     font-size: 20px;
 
+    @include respond(tab-port) {
+        text-align: center;
+        flex-direction: column;
+    }
+
     h3{
         margin: 20px 0 10px 0;
         font-weight: $font-weight-m;
@@ -24,5 +29,11 @@
 
     span{
         line-height: 1.2;
+    }
+
+}
+.border {
+    @include respond(tab-port) {
+        display: none;
     }
 }

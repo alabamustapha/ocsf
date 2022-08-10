@@ -81,35 +81,53 @@ footer {
 
 .about {
   padding: 60px 0; }
+  @media (max-width: 56.25em) {
+    .about {
+      display: flex;
+      align-items: center;
+      flex-direction: column; } }
   .about__row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
-    width: 100%;
     margin-bottom: 80px; }
     @media (max-width: 56.25em) {
       .about__row {
         flex-direction: column-reverse;
-        text-align: center; } }
+        text-align: center;
+        background: #f4f4f4;
+        border-radius: 10px;
+        width: 50%;
+        padding: 20px; } }
     .about__row-text {
       width: 45%;
       color: #212121;
       margin-bottom: 31px; }
+      @media (max-width: 56.25em) {
+        .about__row-text {
+          width: auto; } }
       .about__row-text h3 {
         font-size: 36px;
         font-weight: 600;
         letter-spacing: -0.84px; }
+        @media (max-width: 37.5em) {
+          .about__row-text h3 {
+            font-size: 30px; } }
       .about__row-text p {
         font-size: 20px;
         line-height: 40px;
         font-weight: 400; }
-    @media (max-width: 56.25em) {
+    @media (max-width: 75em) {
       .about__row__image img {
         width: 400px; } }
     @media (max-width: 56.25em) {
       .about__row__image img {
-        width: 250px; } }
+        width: 100%; } }
+
+.rev {
+  text-align: left; }
 
 .contact {
   padding: 60px; }
@@ -126,11 +144,19 @@ footer {
   justify-content: center;
   gap: 50px;
   font-size: 20px; }
+  @media (max-width: 56.25em) {
+    .text__row {
+      text-align: center;
+      flex-direction: column; } }
   .text__row h3 {
     margin: 20px 0 10px 0;
     font-weight: 600; }
   .text__row span {
     line-height: 1.2; }
+
+@media (max-width: 56.25em) {
+  .border {
+    display: none; } }
 
 .footer {
   display: flex;
@@ -235,11 +261,18 @@ header {
   flex-direction: row;
   height: 256px;
   background-color: #212121; }
+  @media (max-width: 56.25em) {
+    .header__container {
+      text-align: center;
+      justify-content: center; } }
   .header__container-green {
     background-color: #A0CF46;
     height: 100%;
     width: 45%;
     clip-path: polygon(0% 0, 100% -40%, 50% 100%, 0 100%); }
+    @media (max-width: 56.25em) {
+      .header__container-green {
+        display: none; } }
   .header__container-primary {
     display: flex;
     flex-direction: column;
@@ -247,6 +280,10 @@ header {
     gap: 7px;
     letter-spacing: -0.84px;
     color: #fff; }
+    @media (max-width: 56.25em) {
+      .header__container-primary {
+        text-align: center;
+        justify-content: center; } }
     .header__container-primary h1 {
       font-weight: 600;
       font-size: 48px; }

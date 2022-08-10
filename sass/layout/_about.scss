@@ -1,18 +1,27 @@
 .about {
     padding: 60px 0;
+    @include respond(tab-port) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
 
     &__row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
         align-items: center;
-        width: 100%;
         margin-bottom: 80px;
 
         @include respond(tab-port) {
             flex-direction: column-reverse;
             text-align: center;
+            background: #f4f4f4;
+            border-radius: 10px;
+            width: 50%;
+            padding: 20px;
         }
 
         &-text{
@@ -20,10 +29,18 @@
             color: $default-color;
             margin-bottom: 31px;
 
+            @include respond(tab-port) {
+                width: auto;
+            }
+
             h3{
                 font-size: 36px;
                 font-weight: $font-weight-m;
-                letter-spacing: -0.84px;  
+                letter-spacing: -0.84px; 
+                
+                @include respond(phone) {
+                    font-size: 30px;
+                }
             }
             p{
                 font-size: 20px;
@@ -33,15 +50,20 @@
         }
 
         &__image {
+            
             img {
-                @include respond(tab-port) {
+                @include respond(tab-land) {
                     width: 400px;
                 }
 
                 @include respond(tab-port) {
-                    width: 250px;
+                    width: 100%;
                 }
             }
         }
     }
+}
+
+.rev {
+    text-align: left;
 }
