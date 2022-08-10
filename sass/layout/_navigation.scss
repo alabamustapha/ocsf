@@ -23,7 +23,7 @@ nav {
         padding: 8px 70px;
     }
     @include respond(phone) {      
-        padding: 8px 50px;
+        padding: 8px 50px;    
     }
 
     &__list { 
