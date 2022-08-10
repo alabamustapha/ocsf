@@ -34,6 +34,9 @@ $breakpoint arguement choices:
     .container {
       padding: 0 50px; } }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #fff;
   font-family: "Poppins", sans-serif;
@@ -429,8 +432,7 @@ nav {
     flex-direction: row;
     margin: 10px auto;
     width: 100%;
-    overflow-x: auto;
-    gap: 20px; }
+    overflow-x: auto; }
     .featured__carousel::-webkit-scrollbar {
       visibility: hidden; }
     .featured__carousel__switch {
@@ -444,7 +446,7 @@ nav {
     justify-content: space-between;
     position: relative;
     min-width: 300px;
-    margin: 10px 20px;
+    margin: 10px;
     transition: 0.5s; }
     .featured__modal__image img {
       width: 100%; }

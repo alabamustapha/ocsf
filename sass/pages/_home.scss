@@ -73,7 +73,6 @@
         margin: 10px auto;
         width: 100%;
         overflow-x: auto;
-        gap: 20px;
 
         &::-webkit-scrollbar{
             visibility: hidden;
@@ -93,7 +92,7 @@
         justify-content: space-between;
         position: relative;
         min-width: 300px;
-        margin: 10px 20px;
+        margin: 10px;
         transition: 0.5s;
 
         &__image {
