@@ -1,9 +1,10 @@
 header {
+    z-index: 1;
     background: linear-gradient(90.14deg, #FFFFFF 41.65%, rgba(237, 127, 52, 0) 58.16%),
                  url('../img/Rectangle 218.png');
                 filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
     background-size: cover;
-    background-position: top;
+    background-position: top; 
     background-repeat: no-repeat;
     
 }

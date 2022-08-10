@@ -23,9 +23,10 @@ $breakpoint arguement choices:
   box-sizing: border-box; }
 
 .container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 100px; }
+  @media (max-width: 56.25em) {
+    .container {
+      padding: 0 70px; } }
 
 body {
   background-color: #fff;
@@ -158,6 +159,7 @@ footer {
       color: #A0CF46; }
 
 header {
+  z-index: 1;
   background: linear-gradient(90.14deg, #FFFFFF 41.65%, rgba(237, 127, 52, 0) 58.16%), url("../img/Rectangle 218.png");
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   background-size: cover;
@@ -211,11 +213,69 @@ nav {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); }
 
 .nav {
-  padding: 0.8rem;
+  padding: 10px 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  .nav__mobile {
+    display: none; }
+  @media (max-width: 75em) {
+    .nav {
+      padding: 8px 50px; } }
+  @media (max-width: 56.25em) {
+    .nav {
+      padding: 8px 70px; } }
+  @media (max-width: 56.25em) and (max-width: 37.5em) {
+    .nav {
+      padding: 5px 30px; }
+      .nav__mobile {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        border: 3px solid #000;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+        transform: scale(0.8);
+        margin-right: 20px; }
+        .nav__mobile:after {
+          position: absolute;
+          content: '';
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          border: 3px solid #000; }
+        .nav__mobile-toggle {
+          height: 2px;
+          width: 30px;
+          position: relative;
+          background-color: #000;
+          z-index: -1; }
+          .nav__mobile-toggle::after, .nav__mobile-toggle::before {
+            height: 2px;
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-color: #000;
+            transition: 0.3s ease;
+            transition-property: top, bottom; }
+          .nav__mobile-toggle::after {
+            top: 8px; }
+          .nav__mobile-toggle::before {
+            bottom: 8px; } }
+      @media (max-width: 56.25em) and (max-width: 37.5em) and (max-width: 56.25em) {
+        .nav__mobile-toggle {
+          display: block; } }
+  @media (max-width: 56.25em) and (max-width: 37.5em) {
+        .nav__mobile .nav__mobile .active .nav__mobile-toggle::after {
+          top: 0; } }
   .nav__number {
     color: #A0CF46;
     font-weight: 400;
@@ -225,7 +285,25 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 25px;
-    justify-content: space-around; }
+    font-size: 16px; }
+    .nav__list-active {
+      display: flex; }
+    @media (max-width: 75em) {
+      .nav__list {
+        font-size: 12px;
+        gap: 15px; } }
+    @media (max-width: 56.25em) {
+      .nav__list {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        background-color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        flex-direction: column; } }
   .nav__main {
     display: flex;
     flex-direction: row;
