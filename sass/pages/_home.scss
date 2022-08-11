@@ -125,8 +125,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 10px;
+        justify-content: center;
+        gap: 32px;
     }
 
     &__briefing {
@@ -201,12 +201,13 @@
     &__img {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         margin: auto;
         gap: 15px;
 
         @include respond(tab-land) {
             flex-direction: column;
-            // object-fit: contain;
         }
     }
 
