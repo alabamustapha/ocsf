@@ -126,7 +126,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 32px;
+        gap: 30px;
     }
 
     &__briefing {
@@ -191,6 +191,18 @@
 .gallery {
     background-color: $color-white;
     padding: 5rem 0;
+
+    h3{
+        font-size: 30px;
+        font-weight: $font-weight-m;
+        letter-spacing: -0.84px; 
+        padding: 0 70px 20px 70px;
+
+        @include respond(tab-land) {
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
  
     &__main {
         display: flex;
@@ -209,6 +221,8 @@
         @include respond(tab-land) {
             flex-direction: column;
         }
+
+        
     }
 
     &__briefing {

@@ -102,7 +102,7 @@ footer {
     justify-content: space-between;
     gap: 20px;
     align-items: center;
-    margin-bottom: 80px; }
+    margin-bottom: 50px; }
     @media (max-width: 56.25em) {
       .about__row {
         flex-direction: column-reverse;
@@ -119,14 +119,14 @@ footer {
         .about__row-text {
           width: auto; } }
       .about__row-text h3 {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 600;
         letter-spacing: -0.84px; }
         @media (max-width: 37.5em) {
           .about__row-text h3 {
             font-size: 30px; } }
       .about__row-text p {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 40px;
         font-weight: 400; }
     @media (max-width: 75em) {
@@ -311,13 +311,13 @@ header {
         justify-content: center; } }
     .header__container-text h1 {
       font-weight: 600;
-      font-size: 48px; }
+      font-size: 34px; }
       @media (max-width: 56.25em) {
         .header__container-text h1 {
-          font-size: 32px; } }
+          font-size: 30px; } }
     .header__container-text p {
       font-weight: 400;
-      font-size: 24px; }
+      font-size: 22px; }
 
 .navigation {
   background-color: #212121; }
@@ -484,7 +484,7 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px; }
+    gap: 30px; }
   .sponsor__briefing h1 {
     text-align: center;
     font-weight: 600;
@@ -524,6 +524,15 @@ nav {
 .gallery {
   background-color: #fff;
   padding: 5rem 0; }
+  .gallery h3 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.84px;
+    padding: 0 70px 20px 70px; }
+    @media (max-width: 75em) {
+      .gallery h3 {
+        padding: 20px 0;
+        text-align: center; } }
   .gallery__main {
     display: flex;
     flex-direction: column;

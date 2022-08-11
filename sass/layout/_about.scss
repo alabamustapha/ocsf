@@ -13,7 +13,7 @@
         justify-content: space-between;
         gap: 20px;
         align-items: center;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
 
         @include respond(tab-port) {
             flex-direction: column-reverse;
@@ -34,7 +34,7 @@
             }
 
             h3{
-                font-size: 36px;
+                font-size: 32px;
                 font-weight: $font-weight-m;
                 letter-spacing: -0.84px; 
                 
@@ -43,7 +43,7 @@
                 }
             }
             p{
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 40px;
                 font-weight: $font-weight-sml;
             }

@@ -89,16 +89,16 @@ header {
     
             h1 {
                 font-weight: $font-weight-m;
-                font-size: 48px;
+                font-size: 34px;
 
                 @include respond(tab-port) {
-                    font-size: 32px;    
+                    font-size: 30px;    
                 }
             }
     
             p {
                 font-weight: $font-weight-sml;
-                font-size: 24px;
+                font-size: 22px;
     
             }
     
