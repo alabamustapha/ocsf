@@ -28,7 +28,12 @@
         p {
             font-weight: $font-weight-sml;
             font-size: 20px;
-            line-height: 40px;
+            line-height: 1.5;
+            padding: 0 250px;
+
+            @include respond(tab-land) {
+                padding: 0;
+            }
         }
     }
 
