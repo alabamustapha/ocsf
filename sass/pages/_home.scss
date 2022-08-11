@@ -1,7 +1,3 @@
-.none {
-    display: none;
-}
-
 // Misssion Section
 .mission {
     background-color: $color-white;
@@ -204,9 +200,9 @@
         margin: auto;
         gap: 15px;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             flex-direction: column;
-            // object-fit: contain;
+            width: 100%;
         }
     }
 
@@ -250,10 +246,18 @@
         display: flex;
         flex-direction: row;
         gap: 10px;
+
+        @include respond(phone) {      
+            justify-content: center;
+            flex-direction: column;
+        }
     }
 }
 .show-links {
     display: flex; 
-    flex-direction: column;
     justify-content: center;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
 }

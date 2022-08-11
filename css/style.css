@@ -62,7 +62,8 @@ footer {
   gap: 10px; }
   @media (max-width: 37.5em) {
     .btn__container {
-      justify-content: center; } }
+      justify-content: center;
+      flex-direction: column; } }
 
 .btn {
   border-radius: none;
@@ -380,7 +381,8 @@ nav {
       padding: 8px 50px; } }
   @media (max-width: 56.25em) {
     .nav__connect {
-      padding: 8px 70px; } }
+      padding: 8px 70px;
+      flex-direction: column; } }
   @media (max-width: 37.5em) {
     .nav__connect {
       padding: 8px 50px; } }
@@ -389,9 +391,6 @@ nav {
   color: #A0CF46;
   font-weight: 400;
   font-size: 16px; }
-
-.none {
-  display: none; }
 
 .mission {
   background-color: #fff;
@@ -525,9 +524,10 @@ nav {
     flex-direction: row;
     margin: auto;
     gap: 15px; }
-    @media (max-width: 75em) {
+    @media (max-width: 56.25em) {
       .gallery__img {
-        flex-direction: column; } }
+        flex-direction: column;
+        width: 100%; } }
   .gallery__briefing h1 {
     text-align: center;
     font-weight: 600;
@@ -557,8 +557,14 @@ nav {
     display: flex;
     flex-direction: row;
     gap: 10px; }
+    @media (max-width: 37.5em) {
+      .donation__btn {
+        justify-content: center;
+        flex-direction: column; } }
 
 .show-links {
   display: flex;
-  flex-direction: column;
   justify-content: center; }
+  @media (max-width: 56.25em) {
+    .show-links {
+      flex-direction: column; } }

@@ -6,6 +6,7 @@
 
     @include respond(phone) {      
         justify-content: center;
+        flex-direction: column;
     }
 }
 .btn {

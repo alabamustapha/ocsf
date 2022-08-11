@@ -86,6 +86,7 @@ nav {
     }
     @include respond(tab-port) {      
         padding: 8px 70px;
+        flex-direction: column;
     }
     @include respond(phone) {      
         padding: 8px 50px;
