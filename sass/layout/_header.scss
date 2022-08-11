@@ -51,13 +51,14 @@ header {
         flex-direction: row;
         height: 256px;
         background-color: $bg-black;
+        position: relative;
 
         @include respond(tab-port) {
             text-align: center;
             justify-content: center;
         }
 
-        &-green {
+        &-orange {
             background-color: $btn-color;
             height: 100%;
             width: 45%; 
@@ -68,31 +69,42 @@ header {
             }
         }
 
-        &-primary {
+        &-text {
             display: flex;
             flex-direction: column;
             margin: auto 0;
             text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             gap: 7px;
             letter-spacing: -0.84px;
             color: $color-white;
-
+    
             @include respond(tab-port) {
                 text-align: center;
                 justify-content: center;    
             }
-
+    
             h1 {
                 font-weight: $font-weight-m;
                 font-size: 48px;
-            }
 
+                @include respond(tab-port) {
+                    font-size: 32px;    
+                }
+            }
+    
             p {
                 font-weight: $font-weight-sml;
                 font-size: 24px;
-
+    
             }
+    
         }
+
     }
+
 
 }
