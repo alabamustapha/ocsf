@@ -474,8 +474,8 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px; }
+    justify-content: center;
+    gap: 32px; }
   .sponsor__briefing h1 {
     text-align: center;
     font-weight: 600;
@@ -522,6 +522,8 @@ nav {
   .gallery__img {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
     gap: 15px; }
     @media (max-width: 56.25em) {
@@ -567,4 +569,5 @@ nav {
   justify-content: center; }
   @media (max-width: 56.25em) {
     .show-links {
+      margin-top: 20px;
       flex-direction: column; } }
