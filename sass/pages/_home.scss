@@ -24,7 +24,12 @@
         p {
             font-weight: $font-weight-sml;
             font-size: 20px;
-            line-height: 40px;
+            line-height: 1.5;
+            padding: 0 250px;
+
+            @include respond(tab-land) {
+                padding: 0;
+            }
         }
     }
 
@@ -94,6 +99,8 @@
         &__image {
             img {
                 width: 100%;
+                height: 363px;
+                object-fit: cover;
             }
         }
 
@@ -110,31 +117,24 @@
             }
         }
     }
+
+    &__slides {
+        display: none;
+    }
+    
+    &__container {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
 }
 
-.mySlides {
-    display: flex;
-}
-
-// img {
-//     vertical-align: middle;
-// }
-
-/* Slideshow container */
-.slideshow-container {
-    width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
     margin-top: -22px;
     color: white;
     font-weight: bold;
@@ -142,39 +142,11 @@
     transition: 0.6s ease;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -191,31 +163,12 @@
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
-    }
-}
+// End of featured
 
 // Sponsor
 .sponsor {
@@ -227,7 +180,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 32px;
+        gap: 30px;
     }
 
     &__briefing {
@@ -293,6 +246,18 @@
     background-color: $color-white;
     padding: 5rem 0;
 
+    h3{
+        font-size: 30px;
+        font-weight: $font-weight-m;
+        letter-spacing: -0.84px; 
+        padding: 0 70px 20px 70px;
+
+        @include respond(tab-land) {
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+ 
     &__main {
         display: flex;
         flex-direction: column;
@@ -311,6 +276,8 @@
             flex-direction: column;
             width: 100%;
         }
+
+        
     }
 
     &__briefing {

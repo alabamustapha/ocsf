@@ -1,12 +1,34 @@
 .navigation{
     background-color: $bg-black;
 }
+
 nav {
     background-color: $color-white;
     box-shadow: $shadow;
+
+    &__stroke ul li a,
+    &__fill ul li a {
+      position: relative;
+    }
+    
+    &__stroke ul li a:after,
+    &__fill ul li a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '.';
+      color: transparent;
+      background: #aaa;
+      height: 1px;
+    }
+
+    &__stroke ul li a:hover:after {
+      width: 100%;
+    }
 }
-
-
 
 .nav {
     padding: 10px 100px;
