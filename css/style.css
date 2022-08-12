@@ -383,47 +383,60 @@ nav {
         display: block; } }
   .nav__logo {
     cursor: pointer; }
+  .nav .stroke ul li a {
+    position: relative; }
+  .nav .stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin: -2px;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #05060F;
+    height: 2px; }
+  .nav .stroke ul li a:hover:after {
+    width: 100%; }
+  .nav__connect {
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-width: 75em) {
+      .nav__connect {
+        padding: 8px 50px; } }
+    @media (max-width: 56.25em) {
+      .nav__connect {
+        padding: 8px 70px;
+        flex-direction: column; } }
+    @media (max-width: 37.5em) {
+      .nav__connect {
+        padding: 8px 50px; } }
+  .nav__number {
+    color: #DD7917;
+    font-weight: 400;
+    font-size: 16px; }
 
-.nav__connect {
-  padding: 10px 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
-  @media (max-width: 75em) {
-    .nav__connect {
-      padding: 8px 50px; } }
-  @media (max-width: 56.25em) {
-    .nav__connect {
-      padding: 8px 70px;
-      flex-direction: column; } }
-  @media (max-width: 37.5em) {
-    .nav__connect {
-      padding: 8px 50px; } }
-
-.nav__number {
-  color: #DD7917;
-  font-weight: 400;
-  font-size: 16px; }
-
-.stroke ul li a {
-  position: relative; }
-
-.stroke ul li a:after {
+.dropdown-content {
+  display: none;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin: -2px;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #05060F;
-  height: 2px; }
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1; }
 
-.stroke ul li a:hover:after {
-  width: 100%; }
+.dropdown-content a {
+  color: #212121;
+  padding: 12px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
 
 .mission {
   background-color: #fff;
