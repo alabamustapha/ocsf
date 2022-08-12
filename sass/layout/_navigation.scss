@@ -1,34 +1,12 @@
-.navigation{
+.navigation {
     background-color: $bg-black;
 }
 
 nav {
     background-color: $color-white;
     box-shadow: $shadow;
-
-    &__stroke ul li a,
-    &__fill ul li a {
-      position: relative;
-    }
-    
-    &__stroke ul li a:after,
-    &__fill ul li a:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 0%;
-      content: '.';
-      color: transparent;
-      background: #aaa;
-      height: 1px;
-    }
-
-    &__stroke ul li a:hover:after {
-      width: 100%;
-    }
 }
+
 
 .nav {
     padding: 10px 100px;
@@ -37,24 +15,26 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    
-    @include respond(tab-land) {      
+
+    @include respond(tab-land) {
         padding: 8px 50px;
     }
-    @include respond(tab-port) {      
+
+    @include respond(tab-port) {
         padding: 8px 70px;
     }
-    @include respond(phone) {      
-        padding: 8px 50px;    
+
+    @include respond(phone) {
+        padding: 8px 50px;
     }
 
-    &__list { 
+    &__list {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 25px;
 
-        @include respond(tab-land){
+        @include respond(tab-land) {
             gap: 15px;
             font-size: 13px;
             display: flex;
@@ -87,7 +67,7 @@ nav {
 
         @include respond(tab-port) {
             display: block;
-            
+
         }
     }
 
@@ -103,14 +83,16 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    @include respond(tab-land) {      
+    @include respond(tab-land) {
         padding: 8px 50px;
     }
-    @include respond(tab-port) {      
+
+    @include respond(tab-port) {
         padding: 8px 70px;
         flex-direction: column;
     }
-    @include respond(phone) {      
+
+    @include respond(phone) {
         padding: 8px 50px;
     }
 
@@ -119,7 +101,28 @@ nav {
 
 .nav__number {
     color: $btn-color;
-    font-weight: $font-weight-sml; 
+    font-weight: $font-weight-sml;
     font-size: $default-font-size;
 }
 
+.stroke ul li a{
+    position: relative;
+}
+
+.stroke ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin: -2px;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #05060F;
+    height: 2px;
+}
+
+.stroke ul li a:hover:after {
+    width: 100%;
+}
